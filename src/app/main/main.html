@@ -1,6 +1,21 @@
 <div class="container">
   <input type="number" ng-model="totalPlays">
   <div>Total Plays: {{totalPlays}}</div>
-  <button>Switch</button>
-  <button>Play</button>
+  <div>Switch: {{switch}}</div>
+  <button ng-click="toggleSwitch()">Switch</button>
+  <button ng-click="letsGo()">Play</button>
+
+  <div>
+    <h2>Results</h2>
+    <table class="table table-striped">
+      <thead><tr><td>Totals</td><td>Win</td><td>Lose</td></tr></thead>
+      <tbody>
+        <tr>
+          <td>{{results.total}}</td>
+          <td>{{results.win}}</td>
+          <td>{{results.lose}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
